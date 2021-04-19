@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huan.number.gatewayimpl.database.NumberMapper">
+    <sql id="ALL_COLUMNS">
+        prefix,
+        value
+    </sql>
+
+    <insert id="create" parameterType="com.huan.number.gatewayimpl.database.dataobject.NumberDO">
+        INSERT INTO number(
+        <include refid="ALL_COLUMNS"/>
+        ) VALUES (
+        #{prefix},
+        #{value}
+        )
+    </insert>
+
+    <update id="update" parameterType="com.huan.number.gatewayimpl.database.dataobject.NumberDO">
+        UPDATE number SET
+        <if test="value != null">
+            value = #{value}
+        </if>
+        where prefix = #{prefix}
+    </update>
+
+    <select id="selectAndLock" resultType="com.huan.number.gatewayimpl.database.dataobject.NumberDO" resultMap="numberMap">
+        select
+        <include refid="ALL_COLUMNS"/>
+        from number where prefix = #{prefix}
+    </select>
+
+    <resultMap type="com.huan.number.gatewayimpl.database.dataobject.NumberDO" id="numberMap">
+         <result property="prefix" column="prefix"/>
+         <result property="value" column="value"/>
+     </resultMap>
+</mapper>
