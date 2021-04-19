@@ -4,9 +4,8 @@ import org.apache.spark.SparkConf
 import org.apache.spark.api.java.JavaSparkContext
 import org.springframework.boot.{ApplicationArguments, ApplicationRunner}
 import org.springframework.stereotype.Component
-;
 
-@Component
+//@Component
 class SparkJobStageSplitRunner extends ApplicationRunner {
     override def run(args: ApplicationArguments): Unit = {
         try {
