@@ -5,7 +5,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 import org.springframework.boot.{ApplicationArguments, ApplicationRunner}
 import org.springframework.stereotype.Component
 
-@Component
+//@Component
 class SparkRDDScalaDemo extends ApplicationRunner{
     override def run(args: ApplicationArguments): Unit = {
         try {
