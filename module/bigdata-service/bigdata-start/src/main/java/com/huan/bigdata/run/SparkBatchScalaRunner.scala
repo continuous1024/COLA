@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component
  *
  * hdfs dfs -ls /user/huanyu/input
  */
-@Component
-class SparkBatchRunner extends ApplicationRunner{
+//@Component
+class SparkBatchScalaRunner extends ApplicationRunner{
     override def run(args: ApplicationArguments): Unit = {
         try {
 

@@ -13,7 +13,14 @@
     <name>start</name>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-scala -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.12</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-kafka-0-10_2.12</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.spark</groupId>
