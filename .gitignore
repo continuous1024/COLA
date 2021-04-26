@@ -26,3 +26,6 @@ doc/
 target/
 out/
 .DS_Store
+
+# 开源仓库
+source/
